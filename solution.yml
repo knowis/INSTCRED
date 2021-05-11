@@ -1,0 +1,12 @@
+appAcronym: "INSTCRED"
+appName: "Instalment Credit"
+appIcon: "credit card"
+appDescription: ""
+appType: "DDD"
+category: "DOMAINSERVICE"
+creationTs: "1620743280601"
+creator: "Philipp Schneider"
+creatorId: "dd80e1a7-693c-4f80-97bc-b52dfc16ddb6"
+domainTags: ["tutorial"]
+language: "TYPESCRIPT"
+basePackage: ""
