@@ -10,11 +10,6 @@ properties:
     required: false
     schema:
       type: boolean
-  - name: amount
-    required: true
-    schema:
-      type: integer
-      enum: []
   - name: currency
     required: true
     schema:
@@ -34,4 +29,9 @@ properties:
     required: false
     schema:
       type: string
+      enum: []
+  - name: amount
+    required: true
+    schema:
+      type: number
       enum: []

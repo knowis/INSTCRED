@@ -1,12 +1,12 @@
 schemaVersion: /v2/namespace.schema.json
-type: domain
-creationTs: '1620743514034'
+type: integration
+creationTs: '1620815461759'
 creator: Philipp Schneider
 creatorId: dd80e1a7-693c-4f80-97bc-b52dfc16ddb6
-label: Credit
+label: User Messages API
 documentation:
-  fileLink: /domain/cred/cred.md
+  fileLink: /integration/ums/ums.md
   schemaVersion: /v1/documentation.schema.json
-  creationTs: '1620743514034'
+  creationTs: '1620815461759'
   creator: Philipp Schneider
   creatorId: dd80e1a7-693c-4f80-97bc-b52dfc16ddb6

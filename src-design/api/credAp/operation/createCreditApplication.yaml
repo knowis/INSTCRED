@@ -6,6 +6,11 @@ creatorId: dd80e1a7-693c-4f80-97bc-b52dfc16ddb6
 type: POST
 tags: []
 parameters: []
+requestBody:
+  required: false
+  content:
+    - contentType: application/json
+      schemaLink: /api/credAp/schema/CreditApplication
 pathLink: /api/credAp/path/#creditApplication
 responses:
   - httpStatusCode: '200'
