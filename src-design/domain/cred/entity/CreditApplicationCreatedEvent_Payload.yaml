@@ -1,0 +1,22 @@
+schemaVersion: /v3/entity.schema.json
+type: entity
+creationTs: '1620812737280'
+creator: Philipp Schneider
+creatorId: dd80e1a7-693c-4f80-97bc-b52dfc16ddb6
+comments: []
+isAbstract: false
+documentation:
+  fileLink: /domain/cred/entity/CreditApplicationCreatedEvent_Payload.md
+  schemaVersion: /v1/documentation.schema.json
+  creationTs: '1620812737310'
+  creator: Philipp Schneider
+  creatorId: dd80e1a7-693c-4f80-97bc-b52dfc16ddb6
+label: creditApplicationCreatedEvent Payload
+parentLinks: []
+properties:
+  - mappingType: value
+    isMandatory: true
+    propertyDefinitionLink: /domain/cred/propertyDefinition/id
+    propertyName: id
+constructorProperties: []
+isLocallyManaged: true

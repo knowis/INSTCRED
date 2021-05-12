@@ -1,0 +1,14 @@
+schemaVersion: /v2/propertyDefinition.schema.json
+comments: []
+creationTs: '1620804549296'
+creator: Philipp Schneider
+creatorId: dd80e1a7-693c-4f80-97bc-b52dfc16ddb6
+isList: false
+type: reference
+rangeLink: /domain/cred/entity/Credit
+documentation:
+  fileLink: /domain/cred/propertyDefinition/credit.md
+  schemaVersion: /v1/documentation.schema.json
+  creationTs: '1620804549328'
+  creator: Philipp Schneider
+  creatorId: dd80e1a7-693c-4f80-97bc-b52dfc16ddb6

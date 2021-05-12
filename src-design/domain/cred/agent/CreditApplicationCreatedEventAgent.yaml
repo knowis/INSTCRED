@@ -1,0 +1,14 @@
+schemaVersion: /v2/agent.schema.json
+comments: []
+creationTs: '1620813190004'
+creator: Philipp Schneider
+creatorId: dd80e1a7-693c-4f80-97bc-b52dfc16ddb6
+type: event
+mappedBusinessEventLinks: []
+triggerEventLink: /domain/cred/event/CreditApplicationCreatedEvent
+documentation:
+  fileLink: /domain/cred/agent/CreditApplicationCreatedEventAgent.md
+  schemaVersion: /v1/documentation.schema.json
+  creationTs: '1620813190036'
+  creator: Philipp Schneider
+  creatorId: dd80e1a7-693c-4f80-97bc-b52dfc16ddb6

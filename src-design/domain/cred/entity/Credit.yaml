@@ -1,0 +1,58 @@
+schemaVersion: /v3/entity.schema.json
+type: root
+creationTs: '1620743549037'
+creator: Philipp Schneider
+creatorId: dd80e1a7-693c-4f80-97bc-b52dfc16ddb6
+comments: []
+isAbstract: false
+documentation:
+  fileLink: /domain/cred/entity/Credit.md
+  schemaVersion: /v1/documentation.schema.json
+  creationTs: '1620743549069'
+  creator: Philipp Schneider
+  creatorId: dd80e1a7-693c-4f80-97bc-b52dfc16ddb6
+label: credit
+parentLinks: []
+dbCollectionLink: /domain/cred/dbCollection/credit
+properties:
+  - mappingType: value
+    isMandatory: true
+    propertyDefinitionLink: /domain/cred/propertyDefinition/amount
+    propertyName: amount
+  - mappingType: value
+    isMandatory: true
+    propertyDefinitionLink: /domain/cred/propertyDefinition/currency
+    propertyName: currency
+  - mappingType: value
+    isMandatory: true
+    propertyDefinitionLink: /domain/cred/propertyDefinition/duration
+    propertyName: duration
+  - mappingType: value
+    isMandatory: true
+    propertyDefinitionLink: /domain/cred/propertyDefinition/effectiveInterestRate
+    propertyName: effectiveInterestRate
+  - mappingType: value
+    isMandatory: false
+    propertyDefinitionLink: /domain/cred/propertyDefinition/end
+    propertyName: end
+  - mappingType: value
+    isMandatory: false
+    propertyDefinitionLink: /domain/cred/propertyDefinition/id
+    propertyName: id
+  - mappingType: value
+    isMandatory: false
+    propertyDefinitionLink: /domain/cred/propertyDefinition/monthlyRate
+    propertyName: monthlyRate
+  - mappingType: value
+    isMandatory: true
+    propertyDefinitionLink: /domain/cred/propertyDefinition/name
+    propertyName: name
+  - mappingType: value
+    isMandatory: true
+    propertyDefinitionLink: /domain/cred/propertyDefinition/nominalInterestRate
+    propertyName: nominalInterestRate
+  - mappingType: value
+    isMandatory: false
+    propertyDefinitionLink: /domain/cred/propertyDefinition/purpose
+    propertyName: purpose
+constructorProperties: []

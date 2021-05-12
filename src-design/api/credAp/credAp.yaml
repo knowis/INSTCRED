@@ -1,0 +1,17 @@
+schemaVersion: /v2/namespace.schema.json
+type: api
+creationTs: '1620814427710'
+creator: Philipp Schneider
+creatorId: dd80e1a7-693c-4f80-97bc-b52dfc16ddb6
+ibmApiConnectIntegration: false
+ibmBpmIntegration: false
+label: Credit Application API v1
+supportedSpec: openApi3.0
+host: credAp
+apiTitle: Credit Application API
+documentation:
+  fileLink: /api/credAp/credAp.md
+  schemaVersion: /v1/documentation.schema.json
+  creationTs: '1620814427710'
+  creator: Philipp Schneider
+  creatorId: dd80e1a7-693c-4f80-97bc-b52dfc16ddb6

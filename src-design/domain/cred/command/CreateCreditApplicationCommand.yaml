@@ -1,0 +1,18 @@
+schemaVersion: /v2/command.schema.json
+comments: []
+creationTs: '1620812414477'
+creator: Philipp Schneider
+creatorId: dd80e1a7-693c-4f80-97bc-b52dfc16ddb6
+label: createCreditApplicationCommand
+type: factory
+baseEntityLink: /domain/cred/entity/CreditApplication
+inputEntityLink: /domain/cred/entity/CreateCreditApplicationCommand_Input
+mappedBusinessErrorLinks: []
+mappedBusinessEventLinks:
+  - /domain/cred/event/CreditApplicationCreatedEvent
+documentation:
+  fileLink: /domain/cred/command/CreateCreditApplicationCommand.md
+  schemaVersion: /v1/documentation.schema.json
+  creationTs: '1620812414510'
+  creator: Philipp Schneider
+  creatorId: dd80e1a7-693c-4f80-97bc-b52dfc16ddb6

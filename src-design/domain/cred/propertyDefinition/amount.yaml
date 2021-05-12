@@ -1,0 +1,12 @@
+schemaVersion: /v2/propertyDefinition.schema.json
+comments: []
+creationTs: '1620744984607'
+creator: Philipp Schneider
+creatorId: dd80e1a7-693c-4f80-97bc-b52dfc16ddb6
+type: integer
+documentation:
+  fileLink: /domain/cred/propertyDefinition/amount.md
+  schemaVersion: /v1/documentation.schema.json
+  creationTs: '1620744984640'
+  creator: Philipp Schneider
+  creatorId: dd80e1a7-693c-4f80-97bc-b52dfc16ddb6

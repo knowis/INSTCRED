@@ -1,0 +1,22 @@
+schemaVersion: /v3/entity.schema.json
+type: entity
+creationTs: '1620812481569'
+creator: Philipp Schneider
+creatorId: dd80e1a7-693c-4f80-97bc-b52dfc16ddb6
+comments: []
+isAbstract: false
+documentation:
+  fileLink: /domain/cred/entity/CreateCreditApplicationCommand_Input.md
+  schemaVersion: /v1/documentation.schema.json
+  creationTs: '1620812481620'
+  creator: Philipp Schneider
+  creatorId: dd80e1a7-693c-4f80-97bc-b52dfc16ddb6
+label: createCreditApplicationCommand Input
+parentLinks: []
+properties:
+  - mappingType: range
+    isMandatory: true
+    propertyDefinitionLink: /domain/cred/propertyDefinition/creditApplication
+    propertyName: creditApplication
+constructorProperties: []
+isLocallyManaged: true

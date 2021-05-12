@@ -1,0 +1,20 @@
+schemaVersion: /v3/apiOperation.schema.json
+comments: []
+creationTs: '1620814544073'
+creator: Philipp Schneider
+creatorId: dd80e1a7-693c-4f80-97bc-b52dfc16ddb6
+type: POST
+tags: []
+parameters: []
+pathLink: /api/credAp/path/#creditApplication
+responses:
+  - httpStatusCode: '200'
+    response:
+      description: Credit application was successfully created
+      content: []
+documentation:
+  fileLink: /api/credAp/operation/createCreditApplication.md
+  schemaVersion: /v1/documentation.schema.json
+  creationTs: '1620814544111'
+  creator: Philipp Schneider
+  creatorId: dd80e1a7-693c-4f80-97bc-b52dfc16ddb6

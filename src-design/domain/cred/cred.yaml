@@ -1,0 +1,12 @@
+schemaVersion: /v2/namespace.schema.json
+type: domain
+creationTs: '1620743514034'
+creator: Philipp Schneider
+creatorId: dd80e1a7-693c-4f80-97bc-b52dfc16ddb6
+label: cred
+documentation:
+  fileLink: /domain/cred/cred.md
+  schemaVersion: /v1/documentation.schema.json
+  creationTs: '1620743514034'
+  creator: Philipp Schneider
+  creatorId: dd80e1a7-693c-4f80-97bc-b52dfc16ddb6

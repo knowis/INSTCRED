@@ -1,0 +1,37 @@
+schemaVersion: /v1/apiSchema.schema.json
+comments: []
+creationTs: '1620814875231'
+creator: Philipp Schneider
+creatorId: dd80e1a7-693c-4f80-97bc-b52dfc16ddb6
+type: object
+allOfLinks: []
+properties:
+  - name: accepted
+    required: false
+    schema:
+      type: boolean
+  - name: amount
+    required: true
+    schema:
+      type: integer
+      enum: []
+  - name: currency
+    required: true
+    schema:
+      type: string
+      enum: []
+  - name: duration
+    required: true
+    schema:
+      type: integer
+      enum: []
+  - name: name
+    required: false
+    schema:
+      type: string
+      enum: []
+  - name: purpose
+    required: false
+    schema:
+      type: string
+      enum: []

@@ -1,0 +1,10 @@
+schemaVersion: /v1/solution.schema.json
+creationTs: '1620743273611'
+creator: Philipp Schneider
+creatorId: dd80e1a7-693c-4f80-97bc-b52dfc16ddb6
+documentation:
+  fileLink: /solution.md
+  schemaVersion: /v1/documentation.schema.json
+  creationTs: '1620743273612'
+  creator: Philipp Schneider
+  creatorId: dd80e1a7-693c-4f80-97bc-b52dfc16ddb6
