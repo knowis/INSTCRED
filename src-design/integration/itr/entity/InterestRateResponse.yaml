@@ -1,0 +1,25 @@
+schemaVersion: /v3/entity.schema.json
+type: entity
+creationTs: '1620995884084'
+creator: Philipp Schneider
+creatorId: dd80e1a7-693c-4f80-97bc-b52dfc16ddb6
+comments: []
+isAbstract: false
+documentation:
+  fileLink: /integration/itr/entity/InterestRateResponse.md
+  schemaVersion: /v1/documentation.schema.json
+  creationTs: '1620995884120'
+  creator: Philipp Schneider
+  creatorId: dd80e1a7-693c-4f80-97bc-b52dfc16ddb6
+label: Interest Rate Response
+parentLinks: []
+properties:
+  - mappingType: value
+    isMandatory: true
+    propertyDefinitionLink: /domain/cred/propertyDefinition/effectiveInterestRate
+    propertyName: effectiveInterestRate
+  - mappingType: value
+    isMandatory: true
+    propertyDefinitionLink: /domain/cred/propertyDefinition/nominalInterestRate
+    propertyName: nominalInterestRate
+constructorProperties: []

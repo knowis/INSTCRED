@@ -1,0 +1,22 @@
+schemaVersion: /v3/entity.schema.json
+type: entity
+creationTs: '1620996491519'
+creator: Philipp Schneider
+creatorId: dd80e1a7-693c-4f80-97bc-b52dfc16ddb6
+comments: []
+isAbstract: false
+documentation:
+  fileLink: /integration/itr/entity/InterestRateCalculator_Input.md
+  schemaVersion: /v1/documentation.schema.json
+  creationTs: '1620996491552'
+  creator: Philipp Schneider
+  creatorId: dd80e1a7-693c-4f80-97bc-b52dfc16ddb6
+label: InterestRateCalculator Input
+parentLinks: []
+properties:
+  - mappingType: value
+    isMandatory: true
+    propertyDefinitionLink: /domain/cred/propertyDefinition/duration
+    propertyName: duration
+constructorProperties: []
+isLocallyManaged: true

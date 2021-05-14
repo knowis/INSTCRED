@@ -1,0 +1,22 @@
+schemaVersion: /v3/entity.schema.json
+type: entity
+creationTs: '1620996439158'
+creator: Philipp Schneider
+creatorId: dd80e1a7-693c-4f80-97bc-b52dfc16ddb6
+comments: []
+isAbstract: false
+documentation:
+  fileLink: /integration/itr/entity/MonthlyRateCalculator_Output.md
+  schemaVersion: /v1/documentation.schema.json
+  creationTs: '1620996439195'
+  creator: Philipp Schneider
+  creatorId: dd80e1a7-693c-4f80-97bc-b52dfc16ddb6
+label: MonthlyRateCalculator Output
+parentLinks: []
+properties:
+  - mappingType: value
+    isMandatory: true
+    propertyDefinitionLink: /domain/cred/propertyDefinition/monthlyRate
+    propertyName: monthlyRate
+constructorProperties: []
+isLocallyManaged: true

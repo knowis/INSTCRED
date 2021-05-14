@@ -1,0 +1,17 @@
+schemaVersion: /v2/service.schema.json
+comments: []
+creationTs: '1620996396398'
+creator: Philipp Schneider
+creatorId: dd80e1a7-693c-4f80-97bc-b52dfc16ddb6
+label: MonthlyRateCalculator
+type: integrationRest
+inputEntityLink: /integration/itr/entity/MonthlyRateCalculatorRequest
+outputEntityLink: /integration/itr/entity/MonthlyRateCalculator_Output
+mappedBusinessErrorLinks: []
+mappedBusinessEventLinks: []
+documentation:
+  fileLink: /integration/itr/service/MonthlyRateCalculator.md
+  schemaVersion: /v1/documentation.schema.json
+  creationTs: '1620996396435'
+  creator: Philipp Schneider
+  creatorId: dd80e1a7-693c-4f80-97bc-b52dfc16ddb6

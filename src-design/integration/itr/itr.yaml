@@ -1,12 +1,12 @@
 schemaVersion: /v2/namespace.schema.json
 type: integration
-creationTs: '1620815461759'
+creationTs: '1620995218992'
 creator: Philipp Schneider
 creatorId: dd80e1a7-693c-4f80-97bc-b52dfc16ddb6
-label: User Messages API
+label: Interest Rate Calculator API
 documentation:
-  fileLink: /integration/ums/ums.md
+  fileLink: /integration/itr/itr.md
   schemaVersion: /v1/documentation.schema.json
-  creationTs: '1620815461759'
+  creationTs: '1620995218992'
   creator: Philipp Schneider
   creatorId: dd80e1a7-693c-4f80-97bc-b52dfc16ddb6

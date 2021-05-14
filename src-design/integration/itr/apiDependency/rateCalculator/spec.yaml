@@ -1,0 +1,81 @@
+openapi: 3.0.0
+info:
+  title: Interest Rate Determination
+  description: >+
+    No toolkit to be used in IBM Business Automation Workflow has been created
+    for RATECALC v1rate. You can enable that in the Solution Designer on API
+    Namespace level.
+
+  version: 1.0.0
+servers:
+  - url: 'https://qa-br.apps.openshift-03.knowis.cloud:443/RATECALC/api'
+paths:
+  '/v1rate/{duration}':
+    get:
+      tags: []
+      operationId: getInterestRateByDuration
+      parameters:
+        - name: duration
+          in: path
+          description: |
+            duration in months
+          required: true
+          style: simple
+          explode: false
+          schema:
+            type: integer
+            description: |
+              duration in months
+      responses:
+        '200':
+          description: >
+            Determines the interest rate (nominal and effective) based on the
+            duration
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InterestRate'
+  /v1calc/:
+    post:
+      tags: []
+      operationId: calculate
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CalcInput'
+        required: false
+      responses:
+        '200':
+          description: |
+            The amount that has to be paid monthly
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CalcOutput'
+components:
+  schemas:
+    InterestRate:
+      type: object
+      properties:
+        effectiveInterestRate:
+          type: number
+        nominalInterestRate:
+          type: number
+    CalcInput:
+      type: object
+      properties:
+        amount:
+          type: number
+        duration:
+          type: integer
+        nominalInterestRate:
+          type: number
+    CalcOutput:
+      type: object
+      properties:
+        monthlyRate:
+          type: number
+  responses: {}
+  requestBodies: {}

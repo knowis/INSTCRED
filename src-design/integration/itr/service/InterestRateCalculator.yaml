@@ -1,0 +1,17 @@
+schemaVersion: /v2/service.schema.json
+comments: []
+creationTs: '1620996474612'
+creator: Philipp Schneider
+creatorId: dd80e1a7-693c-4f80-97bc-b52dfc16ddb6
+label: InterestRateCalculator
+type: integrationRest
+inputEntityLink: /integration/itr/entity/InterestRateCalculator_Input
+outputEntityLink: /integration/itr/entity/InterestRateResponse
+mappedBusinessErrorLinks: []
+mappedBusinessEventLinks: []
+documentation:
+  fileLink: /integration/itr/service/InterestRateCalculator.md
+  schemaVersion: /v1/documentation.schema.json
+  creationTs: '1620996474648'
+  creator: Philipp Schneider
+  creatorId: dd80e1a7-693c-4f80-97bc-b52dfc16ddb6

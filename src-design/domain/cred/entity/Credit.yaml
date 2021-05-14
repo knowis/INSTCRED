@@ -48,7 +48,7 @@ properties:
     propertyDefinitionLink: /domain/cred/propertyDefinition/name
     propertyName: name
   - mappingType: value
-    isMandatory: true
+    isMandatory: false
     propertyDefinitionLink: /domain/cred/propertyDefinition/nominalInterestRate
     propertyName: nominalInterestRate
   - mappingType: value

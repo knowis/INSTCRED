@@ -1,0 +1,25 @@
+schemaVersion: /v3/entity.schema.json
+type: entity
+creationTs: '1620996317342'
+creator: Philipp Schneider
+creatorId: dd80e1a7-693c-4f80-97bc-b52dfc16ddb6
+comments: []
+isAbstract: false
+documentation:
+  fileLink: /integration/itr/entity/MonthlyRateCalculatorRequest.md
+  schemaVersion: /v1/documentation.schema.json
+  creationTs: '1620996317376'
+  creator: Philipp Schneider
+  creatorId: dd80e1a7-693c-4f80-97bc-b52dfc16ddb6
+label: MonthlyRateCalculatorRequest
+parentLinks: []
+properties:
+  - mappingType: value
+    isMandatory: true
+    propertyDefinitionLink: /domain/cred/propertyDefinition/amount
+    propertyName: amount
+  - mappingType: value
+    isMandatory: true
+    propertyDefinitionLink: /domain/cred/propertyDefinition/duration
+    propertyName: duration
+constructorProperties: []
