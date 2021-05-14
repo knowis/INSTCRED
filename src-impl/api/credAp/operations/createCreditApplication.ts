@@ -5,6 +5,7 @@ export default class extends operations.credAp_createCreditApplication {
   public async execute(): Promise<void> {
     const log = this.util.log;
     log.debug('credAp_createCreditApplication.execute()');
+
     const requestBody = this.request.body;
 
     // If there is no existing credit application in the status "New", create a new instance
@@ -17,7 +18,10 @@ export default class extends operations.credAp_createCreditApplication {
     createCreditApplicationInput.creditApplicationRequest.name = requestBody.name;
     createCreditApplicationInput.creditApplicationRequest.accepted = requestBody.accepted;
 
+    // call the associated command
     const creditApplication = await this.repo.cred.CreditApplication.CreateCreditApplicationCommand(createCreditApplicationInput);
+
+    // set response status if command was properly executed
     if (creditApplication) {
       this.response.status = 200;
     }

@@ -1,6 +1,5 @@
 import { commands } from 'solution-framework';
 
-
 export default class extends commands.cred_CreateCreditApplicationCommand {
 
   public async execute(): Promise<void> {

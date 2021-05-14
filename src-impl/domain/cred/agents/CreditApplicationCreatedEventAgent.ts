@@ -12,10 +12,19 @@ export default class extends agents.cred_CreditApplicationCreatedEventAgent {
     // set accepted state always to true
     creditApplication.accepted = true;
 
-    // call Integration Service to get the Interest Rates
-    const monthlyRate = 5;
-    const nominalInterestRate = 0.06;
-    const effectiveInterestRate = 0.06
+    // construct inputs for services
+    const interestRateCalculatorInput = this.factory.entity.itr.InterestRateCalculator_Input();
+    interestRateCalculatorInput.duration = creditApplication.duration;
+
+    const monthlyRateCalculatorInput = this.factory.entity.itr.MonthlyRateCalculatorRequest();
+    monthlyRateCalculatorInput.amount = creditApplication.amount;
+    monthlyRateCalculatorInput.duration = creditApplication.duration;
+
+    // call Integration Service to get the nominal and effective interest rates
+    const { nominalInterestRate, effectiveInterestRate } = await this.services.itr.InterestRateCalculator(interestRateCalculatorInput);
+
+    // call Integration Service to get the monthly rate
+    const { monthlyRate } = await this.services.itr.MonthlyRateCalculator(monthlyRateCalculatorInput);
 
     // construct the credit entity
     const credit = this.factory.entity.cred.Credit();
