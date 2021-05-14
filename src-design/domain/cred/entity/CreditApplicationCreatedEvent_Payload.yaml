@@ -14,9 +14,9 @@ documentation:
 label: creditApplicationCreatedEvent Payload
 parentLinks: []
 properties:
-  - mappingType: value
-    isMandatory: true
-    propertyDefinitionLink: /domain/cred/propertyDefinition/id
-    propertyName: id
+  - mappingType: range
+    isMandatory: false
+    propertyDefinitionLink: /domain/cred/propertyDefinition/creditApplicationRequest
+    propertyName: creditApplicationRequest
 constructorProperties: []
 isLocallyManaged: true

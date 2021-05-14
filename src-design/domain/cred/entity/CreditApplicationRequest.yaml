@@ -1,0 +1,41 @@
+schemaVersion: /v3/entity.schema.json
+type: entity
+creationTs: '1620980992834'
+creator: Philipp Schneider
+creatorId: dd80e1a7-693c-4f80-97bc-b52dfc16ddb6
+comments: []
+isAbstract: false
+documentation:
+  fileLink: /domain/cred/entity/CreditApplicationRequest.md
+  schemaVersion: /v1/documentation.schema.json
+  creationTs: '1620980992862'
+  creator: Philipp Schneider
+  creatorId: dd80e1a7-693c-4f80-97bc-b52dfc16ddb6
+label: CreditApplicationRequest
+parentLinks: []
+properties:
+  - mappingType: value
+    isMandatory: true
+    propertyDefinitionLink: /domain/cred/propertyDefinition/amount
+    propertyName: amount
+  - mappingType: value
+    isMandatory: true
+    propertyDefinitionLink: /domain/cred/propertyDefinition/currency
+    propertyName: currency
+  - mappingType: value
+    isMandatory: true
+    propertyDefinitionLink: /domain/cred/propertyDefinition/duration
+    propertyName: duration
+  - mappingType: value
+    isMandatory: false
+    propertyDefinitionLink: /domain/cred/propertyDefinition/name
+    propertyName: name
+  - mappingType: value
+    isMandatory: false
+    propertyDefinitionLink: /domain/cred/propertyDefinition/purpose
+    propertyName: purpose
+  - mappingType: value
+    isMandatory: false
+    propertyDefinitionLink: /domain/cred/propertyDefinition/accepted
+    propertyName: accepted
+constructorProperties: []

@@ -16,7 +16,7 @@ parentLinks: []
 properties:
   - mappingType: range
     isMandatory: true
-    propertyDefinitionLink: /domain/cred/propertyDefinition/creditApplication
-    propertyName: creditApplication
+    propertyDefinitionLink: /domain/cred/propertyDefinition/creditApplicationRequest
+    propertyName: creditApplicationRequest
 constructorProperties: []
 isLocallyManaged: true
