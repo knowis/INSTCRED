@@ -6,25 +6,30 @@ export default class extends operations.credAp_createCreditApplication {
     const log = this.util.log;
     log.debug('credAp_createCreditApplication.execute()');
 
-    const requestBody = this.request.body;
+    try {
+      const requestBody = this.request.body;
 
-    // If there is no existing credit application in the status "New", create a new instance
-    const createCreditApplicationInput = this.factory.entity.cred.CreateCreditApplicationCommand_Input();
+      // If there is no existing credit application in the status "New", create a new instance
+      const createCreditApplicationInput = this.factory.entity.cred.CreateCreditApplicationCommand_Input();
 
-    createCreditApplicationInput.creditApplicationRequest.amount = requestBody.amount.toString();
-    createCreditApplicationInput.creditApplicationRequest.currency = requestBody.currency;
-    createCreditApplicationInput.creditApplicationRequest.duration = requestBody.duration.toString();
-    createCreditApplicationInput.creditApplicationRequest.purpose = requestBody.purpose;
-    createCreditApplicationInput.creditApplicationRequest.name = requestBody.name;
-    createCreditApplicationInput.creditApplicationRequest.accepted = requestBody.accepted;
+      createCreditApplicationInput.creditApplicationRequest.amount = requestBody.amount.toString();
+      createCreditApplicationInput.creditApplicationRequest.currency = requestBody.currency;
+      createCreditApplicationInput.creditApplicationRequest.duration = requestBody.duration.toString();
+      createCreditApplicationInput.creditApplicationRequest.purpose = requestBody.purpose;
+      createCreditApplicationInput.creditApplicationRequest.name = requestBody.name;
+      createCreditApplicationInput.creditApplicationRequest.accepted = requestBody.accepted;
 
-    // call the associated command
-    const creditApplication = await this.repo.cred.CreditApplication.CreateCreditApplicationCommand(createCreditApplicationInput);
+      // call the associated command
+      const creditApplication = await this.repo.cred.CreditApplication.CreateCreditApplicationCommand(createCreditApplicationInput);
 
-    // set response status if command was properly executed
-    if (creditApplication) {
-      this.response.status = 200;
+      // set response status if command was properly executed
+      if (creditApplication) {
+        this.response.status = 200;
+      }
+    } catch (err) {
+      log.error('Error in createCreditApplication Operation', err);
     }
+
   }
 
   /**
