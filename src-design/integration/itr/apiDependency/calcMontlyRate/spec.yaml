@@ -1,0 +1,169 @@
+openapi: 3.0.0
+info:
+  title: Calculate Monthly Rate V1
+  description: >+
+    No toolkit to be used in IBM Business Automation Workflow has been created
+    for RATECALC v1calc. You can enable that in the Solution Designer on API
+    Namespace level.
+
+  version: 1.0.0
+servers:
+  - url: 'https://qa-br.apps.openshift-03.knowis.cloud:443/RATECALC/api/v1calc'
+security:
+  - oauth2schema: []
+paths:
+  /:
+    post:
+      tags: []
+      operationId: calculate
+      parameters:
+        - name: Accept-Language
+          in: header
+          description: >-
+            List of acceptable human languages for response. According to `RFC
+            7231`
+          required: false
+          style: simple
+          explode: false
+          schema:
+            type: string
+        - name: X-B3-ParentSpanId
+          in: header
+          description: Zipkin Parent Span Id (e.g. `6adc7f8b31f35e91`)
+          required: false
+          style: simple
+          explode: false
+          schema:
+            type: string
+        - name: X-B3-SpanId
+          in: header
+          description: Zipkin Span Id (e.g. `0a7b5cd9c2568f7d`)
+          required: false
+          style: simple
+          explode: false
+          schema:
+            type: string
+        - name: X-B3-TraceId
+          in: header
+          description: Zipkin Trace Id (e.g. `0a7b5cd9c2568f7d6adc7f8b31f35e91`)
+          required: false
+          style: simple
+          explode: false
+          schema:
+            type: string
+        - name: X-B3-Sampled
+          in: header
+          description: Zipkin Sampled (e.g. `0`)
+          required: false
+          style: simple
+          explode: false
+          schema:
+            type: string
+        - name: X-DEBUG-SESSION
+          in: header
+          description: X-DEBUG-SESSION
+          required: false
+          style: simple
+          explode: false
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CalcInput'
+        required: false
+      responses:
+        '200':
+          description: |
+            The amount that has to be paid monthly
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CalcOutput'
+components:
+  schemas:
+    CalcInput:
+      type: object
+      properties:
+        amount:
+          type: number
+        duration:
+          type: integer
+        nominalInterestRate:
+          type: number
+    CalcOutput:
+      type: object
+      properties:
+        monthlyRate:
+          type: number
+  responses: {}
+  parameters:
+    Accept-Language:
+      name: Accept-Language
+      in: header
+      description: List of acceptable human languages for response. According to `RFC 7231`
+      required: false
+      style: simple
+      explode: false
+      schema:
+        type: string
+    X-B3-ParentSpanId:
+      name: X-B3-ParentSpanId
+      in: header
+      description: Zipkin Parent Span Id (e.g. `6adc7f8b31f35e91`)
+      required: false
+      style: simple
+      explode: false
+      schema:
+        type: string
+    X-B3-SpanId:
+      name: X-B3-SpanId
+      in: header
+      description: Zipkin Span Id (e.g. `0a7b5cd9c2568f7d`)
+      required: false
+      style: simple
+      explode: false
+      schema:
+        type: string
+    X-B3-TraceId:
+      name: X-B3-TraceId
+      in: header
+      description: Zipkin Trace Id (e.g. `0a7b5cd9c2568f7d6adc7f8b31f35e91`)
+      required: false
+      style: simple
+      explode: false
+      schema:
+        type: string
+    X-B3-Sampled:
+      name: X-B3-Sampled
+      in: header
+      description: Zipkin Sampled (e.g. `0`)
+      required: false
+      style: simple
+      explode: false
+      schema:
+        type: string
+    X-DEBUG-SESSION:
+      name: X-DEBUG-SESSION
+      in: header
+      description: X-DEBUG-SESSION
+      required: false
+      style: simple
+      explode: false
+      schema:
+        type: string
+  requestBodies: {}
+  securitySchemes:
+    oauth2schema:
+      type: oauth2
+      flows:
+        implicit:
+          authorizationUrl: >-
+            https://auth.apps.openshift-03.knowis.cloud/auth/realms/qa-br/protocol/openid-connect/auth
+          scopes: {}
+      x-tokenName: id_token
+x-knowis-solutionAcronym: RATECALC
+x-knowis-apiName: v1calc
+x-knowis-namespacePrefix: v1calc
+x-knowis-ibmBpmIntegration: false

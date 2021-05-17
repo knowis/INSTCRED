@@ -1,0 +1,7 @@
+schemaVersion: /v1/apiDependency.schema.json
+comments: []
+creationTs: '1621251509077'
+creator: Philipp Schneider
+creatorId: dd80e1a7-693c-4f80-97bc-b52dfc16ddb6
+fileLink: /integration/itr/apiDependency/calcMontlyRate/spec
+localLookup: true

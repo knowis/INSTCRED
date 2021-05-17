@@ -1,7 +1,7 @@
 schemaVersion: /v1/apiDependency.schema.json
 comments: []
-creationTs: '1620997541143'
+creationTs: '1621251547098'
 creator: Philipp Schneider
 creatorId: dd80e1a7-693c-4f80-97bc-b52dfc16ddb6
-fileLink: /integration/itr/apiDependency/rateCalculator/spec
+fileLink: /integration/itr/apiDependency/calcInterestRate/spec
 localLookup: true
