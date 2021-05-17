@@ -4,7 +4,7 @@ creationTs: '1620745208774'
 creator: Philipp Schneider
 creatorId: dd80e1a7-693c-4f80-97bc-b52dfc16ddb6
 type: decimal
-decimalPlaces: '2'
+decimalPlaces: '6'
 documentation:
   fileLink: /domain/cred/propertyDefinition/nominalInterestRate.md
   schemaVersion: /v1/documentation.schema.json
