@@ -5,7 +5,7 @@ export default class extends services.itr_MonthlyRateCalculator {
 
   public async execute(): Promise<void> {
     const log = this.util.log;
-    log.debug('itr_MonthlyRateCalculator.execute()');
+    log.info('itr_MonthlyRateCalculator.execute()');
 
     try {
       const duration = this.input.duration;

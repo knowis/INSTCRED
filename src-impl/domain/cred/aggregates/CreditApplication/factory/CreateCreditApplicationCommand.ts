@@ -4,7 +4,7 @@ export default class extends commands.cred_CreateCreditApplicationCommand {
 
   public async execute(): Promise<void> {
     const log = this.util.log;
-    log.debug('cred_CreateCreditApplicationCommand.execute()');
+    log.info('cred_CreateCreditApplicationCommand.execute()');
 
     try {
 

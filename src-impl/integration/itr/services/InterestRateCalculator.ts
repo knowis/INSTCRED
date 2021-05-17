@@ -4,7 +4,7 @@ export default class extends services.itr_InterestRateCalculator {
 
   public async execute(): Promise<void> {
     const log = this.util.log;
-    log.debug('itr_InterestRateCalculator.execute()');
+    log.info('itr_InterestRateCalculator.execute()');
 
     try {
       // parse input as a number
