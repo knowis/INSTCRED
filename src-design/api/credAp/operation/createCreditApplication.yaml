@@ -17,6 +17,10 @@ responses:
     response:
       description: Credit application was successfully created
       content: []
+  - httpStatusCode: '500'
+    response:
+      description: internal server error
+      content: []
 documentation:
   fileLink: /api/credAp/operation/createCreditApplication.md
   schemaVersion: /v1/documentation.schema.json
