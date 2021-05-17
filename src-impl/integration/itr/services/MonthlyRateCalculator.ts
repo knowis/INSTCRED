@@ -1,5 +1,5 @@
 import { services } from 'solution-framework';
-import { CalcInput } from 'solution-framework/dist/sdk/v1/namespace/apiFacadeSchema/itr_rateCalculator';
+import { CalcInput } from 'solution-framework/dist/sdk/v1/namespace/apiFacadeSchema/itr_calcMontlyRate';
 
 export default class extends services.itr_MonthlyRateCalculator {
 
@@ -23,7 +23,7 @@ export default class extends services.itr_MonthlyRateCalculator {
       }
 
       // call calculate API
-      const response = await this.apis.rateCalculator.calculate( input );
+      const response = await this.apis.calcMontlyRate.calculate( input );
 
       const monthlyRate = response.body.monthlyRate;
 

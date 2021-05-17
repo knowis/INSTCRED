@@ -11,7 +11,7 @@ export default class extends services.itr_InterestRateCalculator {
       const duration = parseFloat(this.input.duration);
 
       // call getInterestRateByDuration API
-      const response = await this.apis.rateCalculator.getInterestRateByDuration( { duration: duration } );
+      const response = await this.apis.calcInterestRate.getInterestRateByDuration( { duration: duration } );
 
       const {nominalInterestRate, effectiveInterestRate} = response.body;
 
