@@ -1,6 +1,5 @@
 import { agents } from 'solution-framework';
 
-
 export default class extends agents.cred_CreditApplicationCreatedEventAgent {
 
   public async execute(): Promise<void> {
@@ -22,12 +21,13 @@ export default class extends agents.cred_CreditApplicationCreatedEventAgent {
       const interestRateCalculatorInput = this.factory.entity.itr.InterestRateCalculator_Input();
       interestRateCalculatorInput.duration = creditApplication.duration;
 
+      // call Integration Service to get the nominal and effective interest rates
+      const { nominalInterestRate, effectiveInterestRate } = await this.services.itr.InterestRateCalculator(interestRateCalculatorInput);
+
       const monthlyRateCalculatorInput = this.factory.entity.itr.MonthlyRateCalculatorRequest();
       monthlyRateCalculatorInput.amount = creditApplication.amount;
       monthlyRateCalculatorInput.duration = creditApplication.duration;
-
-      // call Integration Service to get the nominal and effective interest rates
-      const { nominalInterestRate, effectiveInterestRate } = await this.services.itr.InterestRateCalculator(interestRateCalculatorInput);
+      monthlyRateCalculatorInput.nominalInterestRate = nominalInterestRate.toString();
 
       // call Integration Service to get the monthly rate
       const { monthlyRate } = await this.services.itr.MonthlyRateCalculator(monthlyRateCalculatorInput);

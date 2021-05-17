@@ -25,6 +25,7 @@ export default class extends operations.credAp_createCreditApplication {
 
       // set response status if command was properly executed
       this.response.status = 200;
+
     } catch (err) {
       this.response.status = 500;
       log.error('Error in createCreditApplication Operation', err);
