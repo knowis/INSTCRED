@@ -22,4 +22,8 @@ properties:
     isMandatory: true
     propertyDefinitionLink: /domain/cred/propertyDefinition/duration
     propertyName: duration
+  - mappingType: value
+    isMandatory: true
+    propertyDefinitionLink: /domain/cred/propertyDefinition/nominalInterestRate
+    propertyName: nominalInterestRate
 constructorProperties: []
