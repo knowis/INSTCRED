@@ -8,7 +8,12 @@ export default class extends agents.cred_CreditApplicationCreatedEventAgent {
     log.info('cred_CreditApplicationCreatedEventAgent.execute()');
 
     try {
-      const creditApplication = this.input.creditApplicationRequest;
+      const creditApplication = this.factory.entity.cred.CreditApplicationRequest();
+      creditApplication.amount = this.input.creditApplicationRequest.amount;
+      creditApplication.currency = this.input.creditApplicationRequest.currency;
+      creditApplication.duration = this.input.creditApplicationRequest.duration;
+      creditApplication.name = this.input.creditApplicationRequest.name;
+      creditApplication.purpose = this.input.creditApplicationRequest.purpose;
 
       // set accepted state always to true
       creditApplication.accepted = true;
@@ -41,6 +46,7 @@ export default class extends agents.cred_CreditApplicationCreatedEventAgent {
 
       // persists the credit
       await credit.persist();
+
     } catch (err) {
       log.error('Error in CreditApplicationCreatedEventAgent', err);
     }

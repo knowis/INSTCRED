@@ -25,9 +25,11 @@ export default class extends services.itr_MonthlyRateCalculator {
       // call calculate API
       const response = await this.apis.calcMontlyRate.calculate( input );
 
-      const monthlyRate = response.body.monthlyRate;
+      const monthlyRateResponse = this.factory.entity.itr.MonthlyRateCalculator_Output();
+      monthlyRateResponse.monthlyRate = response.body.monthlyRate.toString();
 
-      this.output.monthlyRate = monthlyRate.toString();
+      this.output = monthlyRateResponse;
+
     } catch (err) {
       log.error('Error in MonthlyRateCalculator', err);
     }
