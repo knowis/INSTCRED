@@ -24,6 +24,8 @@ export default class extends commands.cred_CreateCreditApplicationCommand {
 
       // Create the event payload
       const event = this.factory.event.cred.CreditApplicationCreatedEvent();
+      event.payload = this.factory.entity.cred.CreditApplicationCreatedEvent_Payload();
+      event.payload.creditApplicationRequest = this.factory.entity.cred.CreditApplicationRequest();
       event.payload.creditApplicationRequest.accepted = creditApplicationRequest.accepted;
       event.payload.creditApplicationRequest.amount = creditApplicationRequest.amount;
       event.payload.creditApplicationRequest.currency = creditApplicationRequest.currency;
@@ -33,6 +35,7 @@ export default class extends commands.cred_CreateCreditApplicationCommand {
 
       // Publish the event
       await event.publish();
+
     } catch (err) {
       log.error('Error in CreateCreditApplicationCommand', err);
     }

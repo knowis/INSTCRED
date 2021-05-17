@@ -11,6 +11,7 @@ export default class extends operations.credAp_createCreditApplication {
 
       // If there is no existing credit application in the status "New", create a new instance
       const createCreditApplicationInput = this.factory.entity.cred.CreateCreditApplicationCommand_Input();
+      createCreditApplicationInput.creditApplicationRequest = this.factory.entity.cred.CreditApplicationRequest();
 
       createCreditApplicationInput.creditApplicationRequest.amount = requestBody.amount.toString();
       createCreditApplicationInput.creditApplicationRequest.currency = requestBody.currency;
@@ -20,15 +21,12 @@ export default class extends operations.credAp_createCreditApplication {
       createCreditApplicationInput.creditApplicationRequest.accepted = requestBody.accepted;
 
       // call the associated command
-      const creditApplication = await this.repo.cred.CreditApplication.CreateCreditApplicationCommand(createCreditApplicationInput);
+      await this.repo.cred.CreditApplication.CreateCreditApplicationCommand(createCreditApplicationInput);
 
       // set response status if command was properly executed
-      if (creditApplication) {
-        this.response.status = 200;
-      } else {
-        this.response.status = 500;
-      }
+      this.response.status = 200;
     } catch (err) {
+      this.response.status = 500;
       log.error('Error in createCreditApplication Operation', err);
     }
 

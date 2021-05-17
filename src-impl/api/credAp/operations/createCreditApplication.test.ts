@@ -1,14 +1,11 @@
 import { expect } from 'chai';
 import { operationRunners, TestEnvironment } from 'solution-framework';
+import { credAp_createCreditApplicationRequest } from 'solution-framework/dist/sdk/v1/namespace/operationRequest/credAp_createCreditApplicationRequest';
 
 
 describe('createCreditApplication', () => {
   const testEnvironment = new TestEnvironment();
-  before(async () => {
-    // This block will run automatically before all tests.
-    // Alternatively, use beforeEach() to define what should automatically happen before each test.
-    // This is an optional block.
-  });
+
   after(async () => {
     // This block will run automatically after all tests.
     // Alternatively, use afterEach() to define what should automatically happen after each test.
@@ -18,10 +15,18 @@ describe('createCreditApplication', () => {
     // await testEnvironment.cleanup();
   });
   it('works', async () => {
-    // const runner = new operationRunners.credAp_createCreditApplicationRunner();
-    // await runner.run();
-    console.warn('No tests available');
-    expect(true).to.equal(true);
+    const runner = new operationRunners.credAp_createCreditApplicationRunner();
+    runner.request = new credAp_createCreditApplicationRequest();
+    runner.request.body = testEnvironment.factory.schema.credAp.CreditApplication();
+    runner.request.body.amount = 100;
+    runner.request.body.currency = 'EUR';
+    runner.request.body.name = 'psc';
+    runner.request.body.duration = 12;
+    runner.request.body.purpose = 'test';
+    runner.request.body.accepted = true;
+
+    await runner.run();
+    expect(runner.response.status).to.equal(200);
   });
 
 });
