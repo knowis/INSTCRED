@@ -15,6 +15,7 @@ describe('createCreditApplication', () => {
     // await testEnvironment.cleanup();
   });
   it('works', async () => {
+    // given
     const runner = new operationRunners.credAp_createCreditApplicationRunner();
     runner.request = new credAp_createCreditApplicationRequest();
     runner.request.body = testEnvironment.factory.schema.credAp.CreditApplication();
@@ -25,7 +26,10 @@ describe('createCreditApplication', () => {
     runner.request.body.purpose = 'test';
     runner.request.body.accepted = true;
 
+    // when
     await runner.run();
+
+    // then
     expect(runner.response.status).to.equal(200);
   });
 

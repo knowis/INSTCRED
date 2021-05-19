@@ -20,10 +20,19 @@ describe('itr:MonthlyRateCalculator', () => {
   });
 
   it('works', async () => {
-    // const runner = new serviceRunners.itr_MonthlyRateCalculatorRunner();
-    // await runner.run();
-    console.warn('No tests available');
-    expect(true).to.equal(true);
+    // given
+    const runner = new serviceRunners.itr_MonthlyRateCalculatorRunner();
+    runner.input = testEnvironment.factory.entity.itr.MonthlyRateCalculatorRequest();
+    runner.input.duration = '12';
+    runner.input.amount = '10000'
+    runner.input.nominalInterestRate = '0.01075';
+
+    // when
+    await runner.run();
+
+    // then
+    const monthlyRate = runner.output.monthlyRate;
+    expect(monthlyRate).to.equal('838.19');
   });
 
 });
