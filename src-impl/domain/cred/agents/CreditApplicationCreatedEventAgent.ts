@@ -5,6 +5,7 @@ export default class extends agents.cred_CreditApplicationCreatedEventAgent {
   public async execute(): Promise<void> {
     const log = this.util.log;
     log.info('cred_CreditApplicationCreatedEventAgent.execute()');
+    // just a comment
 
     try {
       const creditApplication = this.factory.entity.cred.CreditApplicationRequest();
