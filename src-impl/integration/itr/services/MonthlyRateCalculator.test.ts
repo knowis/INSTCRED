@@ -32,7 +32,7 @@ describe('itr:MonthlyRateCalculator', () => {
 
     // then
     const monthlyRate = runner.output.monthlyRate;
-    expect(monthlyRate).to.equal('838.19');
+    expect(monthlyRate).to.equal('838.24');
   });
 
 });

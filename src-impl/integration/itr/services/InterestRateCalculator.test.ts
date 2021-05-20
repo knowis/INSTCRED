@@ -32,8 +32,8 @@ describe('itr:InterestRateCalculator', () => {
     const nominalRate = runner.output.nominalInterestRate;
     const effectiveRate = runner.output.effectiveInterestRate;
 
-    expect(nominalRate).to.equal('0.01075');
-    expect(effectiveRate).to.equal('0.0108');
+    expect(nominalRate).to.equal('0.01085');
+    expect(effectiveRate).to.equal('0.01091');
   });
 
 });
