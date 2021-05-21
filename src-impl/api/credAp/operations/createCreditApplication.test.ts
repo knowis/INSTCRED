@@ -1,7 +1,6 @@
 import { expect } from 'chai';
 import { operationRunners, TestEnvironment } from 'solution-framework';
-import { credAp_createCreditApplicationRequest } from 'solution-framework/dist/sdk/v1/namespace/operationRequest/credAp_createCreditApplicationRequest';
-
+// import { credAp_createCreditApplicationRequest } from 'solution-framework/dist/sdk/v1/namespace/operationRequest/credAp_createCreditApplicationRequest';
 
 describe('createCreditApplication', () => {
   const testEnvironment = new TestEnvironment();
@@ -17,7 +16,6 @@ describe('createCreditApplication', () => {
   it('works', async () => {
     // given
     const runner = new operationRunners.credAp_createCreditApplicationRunner();
-    runner.request = new credAp_createCreditApplicationRequest();
     runner.request.body = testEnvironment.factory.schema.credAp.CreditApplication();
     runner.request.body.amount = 100;
     runner.request.body.currency = 'EUR';

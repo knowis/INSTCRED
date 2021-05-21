@@ -28,7 +28,7 @@ export default class extends operations.credAp_createCreditApplication {
 
     } catch (err) {
       this.response.status = 500;
-      log.error('Error in createCreditApplication Operation', err);
+      await this.handleError(err);
     }
 
   }
@@ -37,10 +37,11 @@ export default class extends operations.credAp_createCreditApplication {
    * This function is automatically called when an error occurs within the execution flow of operation credAp_createCreditApplication
    * @param error Operation execution error that occurred.
    */
-  public async handleError(error: Error): Promise<void> {
+  public handleError(error: Error): Promise<void> {
     const log = this.util.log;
     log.debug('credAp_createCreditApplication.handleError()');
     // Add Error handling logic below and set this.response that will be returned as operation credAp_createCreditApplication response
+    throw error;
   }
 
 }

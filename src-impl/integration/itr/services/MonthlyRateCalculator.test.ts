@@ -1,7 +1,6 @@
 import { expect } from 'chai';
 import { serviceRunners, TestEnvironment } from 'solution-framework';
 
-
 describe('itr:MonthlyRateCalculator', () => {
 
   const testEnvironment = new TestEnvironment();
