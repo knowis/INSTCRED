@@ -38,6 +38,7 @@ export default class extends commands.cred_CreateCreditApplicationCommand {
 
     } catch (err) {
       log.error('Error in CreateCreditApplicationCommand', err);
+      throw err;
     }
   }
 

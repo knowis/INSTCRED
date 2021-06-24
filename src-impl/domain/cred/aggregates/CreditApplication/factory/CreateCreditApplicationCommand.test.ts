@@ -20,8 +20,17 @@ describe('cred:CreateCreditApplicationCommand', () => {
   });
 
   it('works', async () => {
-    // const runner = new commandRunners.cred_CreateCreditApplicationCommandRunner();
-    // await runner.run();
+    const runner = new commandRunners.cred_CreateCreditApplicationCommandRunner();
+    runner.input = testEnvironment.factory.entity.cred.CreateCreditApplicationCommand_Input();
+    runner.input.creditApplicationRequest = testEnvironment.factory.entity.cred.CreditApplicationRequest();
+    runner.input.creditApplicationRequest.accepted = true;
+    runner.input.creditApplicationRequest.amount = '200';
+    runner.input.creditApplicationRequest.currency = 'Euro';
+    runner.input.creditApplicationRequest.duration = '20';
+    runner.input.creditApplicationRequest.name = 'mri';
+    runner.input.creditApplicationRequest.purpose = 'New Credit app';
+
+    await runner.run();
     console.warn('No tests available');
     expect(true).to.equal(true);
   });
