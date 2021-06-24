@@ -1,21 +1,21 @@
 schemaVersion: /v3/entity.schema.json
 type: entity
-creationTs: '1620812481569'
-creator: Philipp Schneider
-creatorId: dd80e1a7-693c-4f80-97bc-b52dfc16ddb6
+creationTs: '1622815993773'
+creator: Namrata Gupta
+creatorId: 9cc2a3c7-4108-4270-84c3-4d45a8c793b2
 comments: []
 isAbstract: false
 documentation:
   fileLink: /domain/cred/entity/CreateCreditApplicationCommand_Input.md
   schemaVersion: /v1/documentation.schema.json
-  creationTs: '1620812481620'
-  creator: Philipp Schneider
-  creatorId: dd80e1a7-693c-4f80-97bc-b52dfc16ddb6
+  creationTs: '1622815993826'
+  creator: Namrata Gupta
+  creatorId: 9cc2a3c7-4108-4270-84c3-4d45a8c793b2
 label: createCreditApplicationCommand Input
 parentLinks: []
 properties:
   - mappingType: range
-    isMandatory: true
+    isMandatory: false
     propertyDefinitionLink: /domain/cred/propertyDefinition/creditApplicationRequest
     propertyName: creditApplicationRequest
 constructorProperties: []

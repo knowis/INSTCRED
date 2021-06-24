@@ -7,6 +7,7 @@ label: createCreditApplicationCommand
 type: factory
 baseEntityLink: /domain/cred/entity/CreditApplication
 inputEntityLink: /domain/cred/entity/CreateCreditApplicationCommand_Input
+inputIsEntityList: false
 mappedBusinessErrorLinks: []
 mappedBusinessEventLinks:
   - /domain/cred/event/CreditApplicationCreatedEvent

@@ -1,12 +1,13 @@
-schemaVersion: /v2/event.schema.json
+schemaVersion: /v3/event.schema.json
 comments: []
 creationTs: '1620812725171'
 creator: Philipp Schneider
 creatorId: dd80e1a7-693c-4f80-97bc-b52dfc16ddb6
 label: creditApplicationCreatedEvent
 type: business
-topicLink: /domain/cred/eventTopic/default
+topicAlias: creditapplication
 payloadEntityLink: /domain/cred/entity/CreditApplicationCreatedEvent_Payload
+payloadIsEntityList: false
 documentation:
   fileLink: /domain/cred/event/CreditApplicationCreatedEvent.md
   schemaVersion: /v1/documentation.schema.json
