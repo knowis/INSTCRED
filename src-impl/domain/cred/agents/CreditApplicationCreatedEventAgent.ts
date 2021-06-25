@@ -9,11 +9,11 @@ export default class extends agents.cred_CreditApplicationCreatedEventAgent {
 
     try {
       const creditApplication = this.factory.entity.cred.CreditApplicationRequest();
-      creditApplication.amount = this.input.amount;
-      creditApplication.currency = this.input.currency;
-      creditApplication.duration = this.input.duration;
-      creditApplication.name = this.input.name;
-      creditApplication.purpose = this.input.purpose;
+      creditApplication.amount = this.input.creditApplicationRequest.amount;
+      creditApplication.currency = this.input.creditApplicationRequest.currency;
+      creditApplication.duration = this.input.creditApplicationRequest.duration;
+      creditApplication.name = this.input.creditApplicationRequest.name;
+      creditApplication.purpose = this.input.creditApplicationRequest.purpose;
 
       // set accepted state always to true
       creditApplication.accepted = true;

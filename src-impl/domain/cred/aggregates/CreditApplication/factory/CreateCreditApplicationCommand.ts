@@ -24,13 +24,14 @@ export default class extends commands.cred_CreateCreditApplicationCommand {
 
       // Create the event payload
       const event = this.factory.event.cred.CreditApplicationCreatedEvent();
-      event.payload = this.factory.entity.cred.CreditApplicationRequest();
-      event.payload.accepted = creditApplicationRequest.accepted;
-      event.payload.amount = creditApplicationRequest.amount;
-      event.payload.currency = creditApplicationRequest.currency;
-      event.payload.duration = creditApplicationRequest.duration;
-      event.payload.name = creditApplicationRequest.name;
-      event.payload.purpose = creditApplicationRequest.purpose;
+      event.payload = this.factory.event.cred.CreditApplicationCreatedEvent_Payload();
+      event.payload.creditApplicationRequest = this.factory.entity.cred.CreditApplicationRequest();
+      event.payload.creditApplicationRequest.accepted = creditApplicationRequest.accepted;
+      event.payload.creditApplicationRequest.amount = creditApplicationRequest.amount;
+      event.payload.creditApplicationRequest.currency = creditApplicationRequest.currency;
+      event.payload.creditApplicationRequest.duration = creditApplicationRequest.duration;
+      event.payload.creditApplicationRequest.name = creditApplicationRequest.name;
+      event.payload.creditApplicationRequest.purpose = creditApplicationRequest.purpose;
 
       // Publish the event
       await event.publish();
