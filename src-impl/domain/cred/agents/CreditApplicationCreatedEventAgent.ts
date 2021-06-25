@@ -15,6 +15,9 @@ export default class extends agents.cred_CreditApplicationCreatedEventAgent {
       creditApplication.name = this.input.creditApplicationRequest.name;
       creditApplication.purpose = this.input.creditApplicationRequest.purpose;
 
+      log.info('Received Agent Payload: ', this.input.creditApplicationRequest);
+      log.info('Received Agent Payload Duration: ', creditApplication.duration);
+
       // set accepted state always to true
       creditApplication.accepted = true;
 
