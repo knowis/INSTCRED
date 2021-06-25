@@ -6,7 +6,7 @@ creatorId: dd80e1a7-693c-4f80-97bc-b52dfc16ddb6
 label: creditApplicationCreatedEvent
 type: business
 topicAlias: creditapplication
-payloadEntityLink: /domain/cred/entity/CreditApplicationRequest
+payloadEntityLink: /domain/cred/entity/CreditApplicationCreatedEvent_Payload
 payloadIsEntityList: false
 documentation:
   fileLink: /domain/cred/event/CreditApplicationCreatedEvent.md

@@ -1,0 +1,22 @@
+schemaVersion: /v3/entity.schema.json
+type: entity
+creationTs: '1624600667770'
+creator: mri
+creatorId: bca84ba0-b490-49f5-b6df-274cf4b73d28
+comments: []
+isAbstract: false
+documentation:
+  fileLink: /domain/cred/entity/CreditApplicationCreatedEvent_Payload.md
+  schemaVersion: /v1/documentation.schema.json
+  creationTs: '1624600667824'
+  creator: mri
+  creatorId: bca84ba0-b490-49f5-b6df-274cf4b73d28
+label: creditApplicationCreatedEvent Payload
+parentLinks: []
+properties:
+  - mappingType: range
+    isMandatory: true
+    propertyDefinitionLink: /domain/cred/propertyDefinition/creditApplicationRequest
+    propertyName: creditApplicationRequest
+constructorProperties: []
+isLocallyManaged: true
