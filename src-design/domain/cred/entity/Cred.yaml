@@ -1,0 +1,30 @@
+schemaVersion: /v3/entity.schema.json
+type: root
+creationTs: '1626333165787'
+creator: mri
+creatorId: bca84ba0-b490-49f5-b6df-274cf4b73d28
+comments: []
+isAbstract: false
+documentation:
+  fileLink: /domain/cred/entity/Cred.md
+  schemaVersion: /v1/documentation.schema.json
+  creationTs: '1626333165820'
+  creator: mri
+  creatorId: bca84ba0-b490-49f5-b6df-274cf4b73d28
+label: cred
+parentLinks: []
+dbCollectionLink: /domain/cred/dbCollection/cred
+properties:
+  - mappingType: value
+    isMandatory: false
+    propertyDefinitionLink: /domain/cred/propertyDefinition/amount
+    propertyName: amount
+  - mappingType: value
+    isMandatory: false
+    propertyDefinitionLink: /domain/cred/propertyDefinition/currency
+    propertyName: currency
+  - mappingType: value
+    isMandatory: false
+    propertyDefinitionLink: /domain/cred/propertyDefinition/duration
+    propertyName: duration
+constructorProperties: []
